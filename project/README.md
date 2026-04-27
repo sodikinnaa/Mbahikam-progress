@@ -51,3 +51,18 @@ Dokumen ini berisi daftar urutan kerja yang disarankan agar penyusunan dokumen M
 2. Semua PRD per fitur sudah sesuai scope.
 3. Istilah status konsisten pada semua dokumen.
 4. Dokumen siap untuk sesi review tim.
+
+## Kondisi Struktur Saat Ini
+
+1. docs/flowchart sudah tersedia dan berisi dokumen inti alur sistem.
+2. docs/prd sudah tersedia dan berisi dokumen inti kebutuhan per role.
+3. docs/fitur-per-role berisi detail flowchart dan PRD per fitur untuk Admin, Mentor, dan Mahasiswa.
+
+## Urutan Eksekusi Praktis Tim
+
+1. Review dokumen inti di docs/flowchart dan docs/prd.
+2. Lanjut review detail per role di docs/fitur-per-role/admin.
+3. Lanjut review detail per role di docs/fitur-per-role/mentor.
+4. Lanjut review detail per role di docs/fitur-per-role/mahasiswa.
+5. Lakukan sinkronisasi istilah status antar semua dokumen.
+6. Finalisasi dokumen untuk sesi review dan implementasi.

@@ -15,11 +15,16 @@ Pengelolaan magang yang masih manual menyebabkan proses pendaftaran, absensi, lo
 
 ## Ruang Lingkup Dokumen
 
-Dokumen yang disiapkan pada workspace ini berfokus pada:
+Dokumen yang disiapkan pada workspace ini meliputi:
 
-1. Flowchart global dan role-based.
-2. PRD role-based dan cross-role.
-3. Breakdown fitur per role (Admin, Mentor, Mahasiswa), masing-masing terdiri dari:
+1. Dokumen inti level sistem:
+- Flowchart global.
+- Flowchart role-based.
+- PRD Admin.
+- PRD Mentor.
+- PRD Mahasiswa.
+- PRD Cross-role.
+2. Dokumen detail per fitur untuk tiap role (Admin, Mentor, Mahasiswa):
 - 1 flowchart per fitur.
 - 1 PRD per fitur.
 
@@ -32,8 +37,17 @@ Dokumen yang disiapkan pada workspace ini berfokus pada:
 ## Struktur Folder Utama
 
 1. project/docs/flowchart - Dokumen alur global dan role-based.
-2. project/docs/prd - Dokumen PRD role-based dan cross-role.
-3. project/docs/fitur-per-role - Detail flowchart dan PRD per fitur untuk tiap role.
+2. project/docs/prd - Dokumen PRD level role dan cross-role.
+3. project/docs/fitur-per-role - Dokumen detail per fitur untuk Admin, Mentor, dan Mahasiswa.
+
+## Dokumen Inti yang Harus Ada
+
+1. project/docs/flowchart/01-global-flow.md
+2. project/docs/flowchart/02-role-based-flow.md
+3. project/docs/prd/01-prd-admin.md
+4. project/docs/prd/02-prd-mentor.md
+5. project/docs/prd/03-prd-mahasiswa.md
+6. project/docs/prd/04-prd-cross-role.md
 
 ## Output yang Diharapkan
 
