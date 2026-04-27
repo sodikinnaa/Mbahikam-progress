@@ -1,0 +1,587 @@
+Magis (Magang Informasi dan Sistem)
+
+
+Latar Belakang :
+Pengelolaan program magang di Dinas Kominfo masih dilakukan secara manual atau menggunakan sistem yang belum terintegrasi. Hal ini menyebabkan kesulitan dalam monitoring kehadiran, penilaian, pengarsipan proyek, serta pembuatan laporan akhir. Oleh karena itu, dibutuhkan sebuah sistem informasi manajemen magang berbasis web yang terintegrasi dan komprehensif.
+Tujuan Sistem :
+1. Mengelola proses rekrutmen magang secara digital.
+2. Memantau kehadiran mahasiswa secara real-time.
+3. Menyediakan sistem logbook harian berbasis web.
+4. Mengotomatisasi penilaian.
+5. Menyediakan dashboard monitoring untuk pimpinan.
+KEBUTUHAN SISTEM
+Aktor Sistem :
+* Admin Kominfo
+* Mentor/Pembina
+* Mahasiswa Magang
+Fitur Utama Sistem :
+1. Sistem Penilaian Mahasiswa
+* Form evaluasi digital (analisis, komunikasi, kerja sama tim, disiplin).
+* Perhitungan nilai akhir otomatis.
+* Export nilai dalam format PDF 
+2. Manajemen Kehadiran
+* Presensi berbasis selfie.
+
+
+3. Logbook Kinerja Harian
+* Input kegiatan harian.
+* Upload bukti foto/dokumen.
+* Validasi mentor.
+Fitur Tambahan:
+* Dashboard Monitoring Real-time.
+* Repositori Tugas/Proyek Mahasiswa.
+
+
+Kebutuhan Fungsional:
+Sistem harus dapat:
+1. Mengelola pendaftaran magang dengan dua jalur:
+-Registrasi mandiri
+-Berdasarkan data instansi
+2. Mengelola periode magang
+3. Mengelola absensi harian
+4. Mengelola kegiatan harian
+5. Menghitung penilaian akhir otomatis
+6. Menghasilkan laporan 
+PERANCANGAN SISTEM:
+Flowchart :
+MAGIS (Magang Informasi dan Sistem)
+Sistem MAGIS (Magang Informasi dan Sistem) merupakan sistem informasi berbasis web yang dirancang untuk membantu pengelolaan kegiatan magang secara terintegrasi di Dinas Komunikasi, Informatika dan Statistik Provinsi Lampung. Sistem ini bertujuan untuk mempermudah proses pendaftaran mahasiswa magang, monitoring aktivitas selama magang, pengelolaan presensi, hingga penilaian kinerja mahasiswa oleh mentor.
+Dalam sistem ini terdapat tiga aktor utama, yaitu:
+   1. Mahasiswa Magang
+   2. Admin Kominfo
+   3. Mentor atau Pembina Magang
+Masing-masing aktor memiliki peran dan alur proses yang berbeda, namun saling terhubung dalam satu sistem. Berikut penjelasan alur sistem berdasarkan flowchart yang telah dirancang.
+1. Alur Sistem Mahasiswa
+Alur mahasiswa dimulai dari proses pendaftaran hingga menyelesaikan kegiatan magang. Mahasiswa merupakan pengguna utama dalam sistem ini karena seluruh aktivitas magang dilakukan melalui sistem.
+Registrasi Mandiri
+Proses pertama yang dilakukan mahasiswa adalah melakukan registrasi akun pada sistem. Pada tahap ini mahasiswa diminta untuk memasukkan beberapa data dasar seperti nama lengkap, email, nomor induk mahasiswa, asal universitas, serta membuat password untuk akun mereka.
+Registrasi ini bertujuan untuk membuat identitas pengguna di dalam sistem sehingga mahasiswa dapat mengakses berbagai fitur yang tersedia.
+Login
+Setelah akun berhasil dibuat, mahasiswa dapat melakukan login ke dalam sistem menggunakan email dan password yang telah didaftarkan sebelumnya. Login berfungsi sebagai proses autentikasi agar sistem dapat mengenali pengguna dan memberikan akses sesuai dengan perannya.
+Mengisi Data Profil
+Setelah berhasil login, mahasiswa diwajibkan untuk melengkapi data profil mereka. Data yang diisi biasanya meliputi:
+   * Universitas asal
+   * Program studi
+   * Nomor telepon
+   * Alamat tempat tinggal
+   * Periode magang yang dipilih
+Data profil ini penting karena akan digunakan oleh pihak admin sebagai bahan pertimbangan dalam proses seleksi mahasiswa magang.
+Upload Berkas Persyaratan
+Selanjutnya mahasiswa diminta untuk mengunggah dokumen persyaratan yang diperlukan untuk mengikuti program magang. Dokumen tersebut dapat berupa:
+   * Curriculum Vitae (CV)
+   * Surat pengantar dari universitas
+   * Transkrip nilai
+   * Proposal magang (jika diperlukan)
+Berkas ini akan menjadi bahan evaluasi bagi admin sebelum memutuskan apakah mahasiswa dapat diterima sebagai peserta magang.
+Mengirim Pendaftaran
+Setelah semua data dan berkas lengkap, mahasiswa dapat mengirimkan pendaftaran mereka melalui sistem. Pada tahap ini status pendaftaran akan berubah menjadi Pending, yang berarti pendaftaran sedang menunggu proses verifikasi dari admin.
+Menunggu Validasi Admin
+Pada tahap ini mahasiswa tidak dapat melakukan aktivitas magang karena pendaftaran mereka masih dalam proses pemeriksaan. Admin akan memeriksa kelengkapan data serta kesesuaian dokumen yang telah diunggah oleh mahasiswa.
+Keputusan Pendaftaran
+Setelah dilakukan pemeriksaan oleh admin, terdapat dua kemungkinan hasil keputusan:
+Jika pendaftaran ditolak
+Mahasiswa akan menerima status "Ditolak". Hal ini dapat terjadi jika dokumen tidak lengkap, kuota magang sudah penuh, atau mahasiswa tidak memenuhi kriteria yang ditentukan.
+Jika pendaftaran diterima
+Status mahasiswa akan berubah menjadi Aktif, yang berarti mahasiswa resmi menjadi peserta magang.
+Memulai Masa Magang
+Setelah diterima, mahasiswa dapat memulai kegiatan magang sesuai dengan periode yang telah ditentukan oleh instansi. Pada tahap ini mahasiswa juga akan mendapatkan mentor atau pembimbing yang akan mengawasi kegiatan mereka selama magang.
+Absensi Masuk (Check In)
+Setiap hari mahasiswa diwajibkan melakukan presensi masuk melalui sistem. Fitur presensi ini dapat dikembangkan dengan metode tertentu seperti:
+   * Selfie verification
+   * GPS location
+   * Timestamp otomatis
+Tujuan dari presensi ini adalah untuk mencatat kehadiran mahasiswa selama mengikuti program magang.
+Menginput Kegiatan Harian
+Setelah melakukan presensi, mahasiswa harus mengisi logbook atau catatan kegiatan harian. Logbook ini berisi informasi mengenai aktivitas atau pekerjaan yang telah dilakukan selama hari tersebut, seperti tugas yang diberikan, proses pengerjaan, dan hasil pekerjaan.
+Mahasiswa juga dapat mengunggah bukti pendukung seperti foto atau dokumen jika diperlukan.
+
+
+
+
+Validasi Kegiatan oleh Mentor
+Setelah kegiatan harian diinput, data tersebut akan masuk ke dalam sistem untuk diverifikasi oleh mentor. Mentor akan memeriksa apakah kegiatan yang dilaporkan sesuai dengan tugas yang diberikan.
+Terdapat dua kemungkinan hasil validasi:
+Jika kegiatan ditolak, mahasiswa akan diminta untuk memperbaiki atau merevisi catatan kegiatan yang telah dibuat.
+Jika kegiatan disetujui, maka kegiatan tersebut akan dianggap valid dan tercatat sebagai aktivitas resmi mahasiswa selama magang.
+Absensi Pulang (Check Out)
+Setelah menyelesaikan aktivitas harian, mahasiswa diwajibkan melakukan presensi keluar. Presensi ini menandai bahwa mahasiswa telah menyelesaikan kegiatan magang pada hari tersebut.
+Proses presensi dan pengisian kegiatan ini akan dilakukan secara berulang setiap hari selama masa magang berlangsung.
+Upload Laporan Akhir
+Setelah masa magang selesai, mahasiswa diwajibkan untuk mengunggah laporan akhir magang melalui sistem. Laporan ini biasanya berisi ringkasan kegiatan, hasil pekerjaan, serta pengalaman yang diperoleh selama mengikuti program magang.
+Melihat Nilai Akhir
+Setelah laporan akhir dikumpulkan dan mentor melakukan evaluasi, mahasiswa dapat melihat nilai akhir mereka melalui sistem. Nilai ini merupakan hasil penilaian mentor berdasarkan beberapa kriteria yang telah ditentukan.
+
+
+
+
+2. Alur Sistem Admin
+Admin memiliki peran sebagai pengelola utama sistem yang bertanggung jawab terhadap proses administrasi magang.
+Login Admin
+Admin terlebih dahulu melakukan login ke dalam sistem menggunakan akun khusus yang telah diberikan. Hak akses admin berbeda dengan pengguna lain karena admin memiliki kontrol penuh terhadap sistem.
+Mengelola Periode Magang
+Admin dapat mengatur periode magang yang tersedia. Pengaturan ini meliputi tanggal mulai dan tanggal berakhirnya program magang serta jumlah kuota mahasiswa yang dapat diterima pada periode tersebut.
+Melihat Data Pendaftaran
+Admin dapat melihat daftar mahasiswa yang telah melakukan pendaftaran melalui sistem. Data yang ditampilkan meliputi identitas mahasiswa serta dokumen yang telah diunggah.
+Validasi Pendaftaran
+Admin melakukan pemeriksaan terhadap setiap pendaftaran yang masuk. Pemeriksaan ini meliputi kelengkapan berkas serta kesesuaian data yang diberikan oleh mahasiswa.
+Keputusan Pendaftaran
+Setelah proses pemeriksaan selesai, admin akan menentukan apakah mahasiswa layak untuk diterima atau tidak. Jika tidak layak, maka pendaftaran akan ditolak. Jika layak, maka mahasiswa akan diterima sebagai peserta magang.
+Penunjukan Mentor
+Setelah mahasiswa diterima, admin akan menunjuk mentor yang bertanggung jawab untuk membimbing mahasiswa tersebut selama masa magang.
+Monitoring Absensi
+Admin dapat memantau kehadiran mahasiswa melalui fitur monitoring presensi. Data presensi ini dapat digunakan untuk melihat tingkat kedisiplinan mahasiswa selama mengikuti program magang.
+Monitoring Kegiatan Mahasiswa
+Selain presensi, admin juga dapat melihat aktivitas harian mahasiswa yang tercatat dalam logbook. Hal ini bertujuan untuk memastikan bahwa kegiatan magang berjalan sesuai dengan rencana.
+Input Mahasiswa Manual
+Dalam beberapa kasus, admin juga dapat menambahkan data mahasiswa secara manual tanpa melalui proses registrasi online. Fitur ini biasanya digunakan jika mahasiswa sudah terdaftar sebelumnya atau berasal dari instansi tertentu.
+3. Alur Sistem Mentor
+Mentor memiliki peran sebagai pembimbing yang mengawasi aktivitas mahasiswa selama masa magang.
+Login Mentor
+Mentor masuk ke dalam sistem menggunakan akun yang telah diberikan oleh admin.
+Melihat Daftar Mahasiswa
+Setelah login, mentor dapat melihat daftar mahasiswa yang berada di bawah bimbingannya.
+Memilih Mahasiswa
+Mentor dapat memilih salah satu mahasiswa untuk melihat detail aktivitas serta perkembangan selama magang.
+
+
+
+
+
+
+Melihat Kegiatan Harian
+Mentor dapat mengakses logbook kegiatan harian mahasiswa yang telah diinput oleh mahasiswa melalui sistem.
+Validasi Kegiatan
+Mentor akan memeriksa kegiatan yang dilaporkan oleh mahasiswa. Jika kegiatan tersebut sesuai dengan tugas yang diberikan, maka mentor dapat menyetujuinya. Namun jika terdapat kesalahan atau kekurangan, mentor dapat menolak kegiatan tersebut.
+Memberikan Catatan Evaluasi
+Jika kegiatan ditolak, mentor dapat memberikan catatan evaluasi atau komentar sebagai masukan bagi mahasiswa agar dapat memperbaiki laporan kegiatan mereka.
+Input Penilaian Kinerja
+Pada akhir periode magang, mentor akan memberikan penilaian akhir terhadap mahasiswa. Penilaian ini biasanya didasarkan pada beberapa aspek seperti kedisiplinan, kualitas pekerjaan, kemampuan komunikasi, serta kemampuan bekerja sama dalam tim.
+
+
+
+
+  
+
+Usecase:
+1. Aktor dalam Sistem
+Dalam Sistem Manajemen Magang Kominfo, terdapat tiga aktor utama yang berinteraksi dengan sistem, yaitu:
+1. Mahasiswa
+Mahasiswa merupakan pengguna utama sistem yang melakukan kegiatan magang di Dinas Kominfo. Mahasiswa menggunakan sistem untuk melakukan pendaftaran magang, mengisi data kegiatan selama magang, melakukan absensi, serta melihat hasil penilaian magang.
+2. Admin
+Admin merupakan pengelola sistem yang bertugas untuk mengatur proses pendaftaran magang, memverifikasi data mahasiswa, mengelola periode magang, serta melakukan monitoring aktivitas mahasiswa selama masa magang berlangsung.
+3. Mentor
+Mentor merupakan pembimbing lapangan yang bertugas memantau aktivitas mahasiswa selama menjalankan program magang serta memberikan penilaian terhadap kinerja mahasiswa.
+2. Use Case Mahasiswa
+Register Mahasiswa
+Use case ini digunakan oleh mahasiswa yang belum memiliki akun pada sistem. Pada tahap ini mahasiswa melakukan pendaftaran akun dengan memasukkan data dasar seperti nama, email, password, universitas, serta program studi. Setelah proses registrasi berhasil, mahasiswa dapat menggunakan akun tersebut untuk login ke dalam sistem.
+Login Mahasiswa
+Use case login mahasiswa digunakan untuk melakukan proses autentikasi sebelum mahasiswa dapat mengakses sistem. Mahasiswa memasukkan username atau email serta password yang telah didaftarkan sebelumnya. Jika data login benar, mahasiswa akan diarahkan ke dashboard mahasiswa.
+Isi Data Magang
+Setelah berhasil login, mahasiswa diwajibkan mengisi informasi terkait kegiatan magang. Data yang diisi biasanya meliputi nama instansi, divisi atau bidang kerja, periode magang, serta informasi pembimbing jika sudah ditentukan. Data ini digunakan oleh admin untuk memverifikasi pendaftaran magang mahasiswa.
+Upload Berkas Magang
+Mahasiswa juga diwajibkan mengunggah dokumen persyaratan magang ke dalam sistem. Dokumen yang biasanya diunggah meliputi surat pengantar dari kampus, proposal magang, curriculum vitae (CV), dan dokumen pendukung lainnya. Berkas yang telah diunggah akan diperiksa oleh admin sebelum mahasiswa dinyatakan diterima.
+Melihat Status Validasi
+Mahasiswa dapat melihat status pendaftaran magang mereka pada sistem. Status yang ditampilkan meliputi:
+   1. Pending – Menunggu verifikasi dari admin.
+   2. Diterima – Pendaftaran disetujui, mahasiswa dapat memulai magang.
+   3. Ditolak – Pendaftaran tidak disetujui.
+   4. Selesai – Mahasiswa telah menyelesaikan seluruh periode magang dan semua aktivitas terkait.
+Fitur ini membantu mahasiswa mengetahui apakah pendaftaran mereka telah disetujui oleh pihak Kominfo atau belum.
+Input Absensi Harian
+Selama masa magang berlangsung, mahasiswa diwajibkan melakukan absensi setiap hari melalui sistem. Absensi ini berfungsi untuk mencatat kehadiran mahasiswa selama kegiatan magang berlangsung. Data yang dicatat biasanya meliputi tanggal kehadiran, jam masuk, dan jam pulang.
+Input Kegiatan Harian
+Mahasiswa juga diwajibkan mencatat aktivitas atau pekerjaan yang dilakukan setiap hari selama masa magang. Laporan kegiatan harian ini berfungsi sebagai dokumentasi aktivitas mahasiswa serta sebagai bahan evaluasi bagi mentor dan admin.
+Melihat Nilai Magang
+Setelah masa magang selesai dan mentor telah memberikan penilaian, mahasiswa dapat melihat hasil evaluasi atau nilai magang melalui sistem. Nilai ini diberikan berdasarkan kinerja mahasiswa selama mengikuti kegiatan magang.
+Logout Mahasiswa
+Use case ini digunakan oleh mahasiswa untuk keluar dari sistem setelah selesai menggunakan aplikasi. Logout dilakukan untuk menjaga keamanan akun mahasiswa.
+3. Use Case Admin
+Login Admin
+Admin harus melakukan login terlebih dahulu sebelum dapat mengakses fitur pengelolaan sistem. Proses login ini bertujuan untuk memverifikasi identitas admin sehingga hanya admin yang memiliki akses yang dapat mengelola data dalam sistem.
+Kelola Periode Magang
+Admin memiliki kewenangan untuk mengatur periode pelaksanaan program magang. Pada fitur ini admin dapat menambahkan periode magang baru, mengubah periode yang sudah ada, atau menghapus periode yang tidak digunakan lagi.
+Validasi Pendaftaran
+Admin bertugas memeriksa data pendaftaran mahasiswa yang telah masuk ke dalam sistem. Admin akan memeriksa kelengkapan data serta dokumen yang telah diunggah oleh mahasiswa. Berdasarkan hasil pemeriksaan tersebut, admin dapat memutuskan apakah mahasiswa diterima atau ditolak.
+Input Mahasiswa Manual
+Fitur ini digunakan ketika terdapat mahasiswa yang sudah melakukan kegiatan magang di instansi namun belum terdaftar dalam sistem. Admin dapat memasukkan data mahasiswa tersebut secara manual ke dalam sistem agar aktivitas magang mereka tetap dapat dimonitor.
+Assign Mentor
+Setelah mahasiswa diterima sebagai peserta magang, admin akan menentukan mentor atau pembimbing yang bertanggung jawab untuk membimbing mahasiswa tersebut selama masa magang.
+Monitoring Absensi
+Admin dapat memantau data absensi mahasiswa selama menjalankan kegiatan magang. Fitur ini membantu admin mengetahui tingkat kehadiran mahasiswa serta mendeteksi jika terdapat mahasiswa yang tidak aktif mengikuti kegiatan magang.
+
+
+Monitoring Kegiatan
+Admin juga dapat melihat laporan kegiatan harian yang diinput oleh mahasiswa. Dengan fitur ini admin dapat memastikan bahwa mahasiswa benar-benar menjalankan aktivitas magang sesuai dengan program yang telah ditentukan.
+Kelola Data Mahasiswa
+Admin dapat mengelola seluruh data mahasiswa yang terdaftar dalam sistem. Admin dapat melakukan perubahan data, penghapusan data, maupun melihat detail informasi mahasiswa yang sedang menjalankan program magang.
+Logout Admin
+Use case ini digunakan oleh admin untuk keluar dari sistem setelah selesai melakukan pengelolaan data.
+4. Use Case Mentor
+Login Mentor
+Mentor harus melakukan login terlebih dahulu untuk dapat mengakses sistem. Proses login memastikan bahwa hanya mentor yang memiliki akun yang dapat mengakses data mahasiswa bimbingannya.
+Monitoring Mahasiswa
+Mentor dapat melihat daftar mahasiswa yang berada di bawah bimbingannya serta memantau perkembangan kegiatan yang dilakukan oleh mahasiswa selama masa magang.
+Memberikan Penilaian
+Setelah masa magang selesai, mentor akan memberikan penilaian terhadap mahasiswa berdasarkan kinerja selama mengikuti kegiatan magang. Penilaian ini biasanya mencakup beberapa aspek seperti kedisiplinan, tanggung jawab, kemampuan kerja, dan hasil pekerjaan. 
+Logout Mentor
+Mentor dapat keluar dari sistem setelah selesai melakukan monitoring dan penilaian terhadap mahasiswa.
+  
+
+
+
+
+
+Uml diagram :
+   * Activity Diagram :
+Registrasi & Autentikasi Untuk Mahasiswa magang (Akses Awal)
+Bagian ini mengatur bagaimana mahasiswa magang masuk ke dalam ekosistem aplikasi.
+Registrasi Mahasiswa (Dua Jalur): 
+   * Mandiri: Sistem harus menyediakan formulir pendaftaran publik. Mahasiswa mengisi data, dan sistem mengirimkan email verifikasi.
+   * Admin-Generated: Admin memiliki panel khusus untuk menginput data mahasiswa. Sistem secara otomatis men-generate akun dan mengirimkan kredensial (username/password) ke mahasiswa.
+Login Multi-User: Sistem harus memiliki role-based access control (RBAC). Halaman login mungkin satu, tetapi sistem harus mampu mengarahkan user ke dashboard yang berbeda (Admin, Mahasiswa, atau Mentor) berdasarkan peran mereka.
+Mahasiswa: Manajemen Aktivitas
+Ini adalah inti dari interaksi harian pengguna mahasiswa.
+   * Presensi Digital (Selfie-Based):
+   * Sistem harus mengintegrasikan fitur kamera (untuk web/mobile).
+   * Data yang disimpan: Foto selfie, koordinat lokasi (opsional, untuk akurasi), dan stempel waktu (timestamp).
+Logbook Kinerja Harian:
+   * Mahasiswa menginput narasi kegiatan dalam bentuk teks.
+   * Fitur Upload Dokumen: Sistem harus mendukung format gambar (JPG/PNG) atau PDF sebagai bukti pendukung.
+   * Status Tracking: Mahasiswa memiliki indikator status pada setiap aktivitas (misal: "Menunggu Validasi", "Disetujui", atau "Perlu Revisi").
+Mentor: Validasi & Penilaian
+   * Mentor bertindak sebagai pengawas kualitas data yang masuk.
+   * Review Dashboard: Mentor memiliki daftar antrean (task list) aktivitas mahasiswa yang belum divalidasi.
+   * Decision Point (Validasi):  Jika Setuju: Status aktivitas berubah menjadi "Valid" dan lanjut ke tahap penilaian.
+   * Jika Revisi: Mentor wajib mengisi kolom komentar alasan penolakan, dan sistem akan mengembalikan tugas tersebut ke dashboard mahasiswa untuk diperbaiki.
+   * Input Penilaian: Mentor memberikan skor numerik atau grade berdasarkan kualitas logbook yang dikirimkan.
+Admin: Monitoring & Output
+Admin memiliki fungsi manajerial dan pengelolaan data akhir.
+Dashboard Monitoring: Grafik atau tabel ringkasan yang menunjukkan berapa banyak mahasiswa yang aktif, sudah absen, atau yang logbooknya menumpuk belum dinilai.
+Data Management: Fitur CRUD (Create, Read, Update, Delete) untuk data mahasiswa dan mentor.
+Export Engine: Fitur untuk mengonversi data penilaian menjadi file format Excel atau PDF Sertifikat secara otomatis (otomatisasi dokumen).
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Sequence Diagram :
+Sequence Diagram – Registrasi & Login Mahasiswa :
+  
+
+Sequence Diagram – Validasi Pendaftaran oleh Admin :
+  
+
+
+
+
+
+
+
+Sequence Diagram – Presensi & Logbook Harian Mahasiswa:
+  
+
+Sequence Diagram – Validasi Logbook oleh Mentor :
+  
+
+
+
+
+
+Sequence Diagram – Penilaian & Sertifikat :
+  
+
+Class diagram :
+   1. Class User
+Class Users merupakan kelas induk (parent class) yang menyimpan data dasar semua pengguna sistem.
+Atribut
+   * id_user : int
+ ID unik yang digunakan sebagai identitas setiap pengguna dalam sistem.
+   * nama_lengkap : varchar
+ Nama lengkap pengguna (mahasiswa, mentor, atau admin).
+   * username : varchar
+ Username yang digunakan pengguna untuk login ke sistem.
+   * password : varchar
+ Password yang digunakan untuk autentikasi pengguna.
+   * role : enum
+ Menentukan jenis pengguna dalam sistem, misalnya:
+-admin
+-mentor
+-mahasiswa
+Method
+      * login()
+ Digunakan pengguna untuk masuk ke dalam sistem menggunakan username dan password.
+      * logout()
+ Digunakan pengguna untuk keluar dari sistem.
+Relasi
+Class Users menjadi superclass yang diturunkan oleh:
+         * Admin
+         * Mentor
+         * Mahasiswa
+Artinya ketiga class tersebut mewarisi atribut dan method dari Users.
+         2. Class Admin
+Class Admin merupakan turunan dari class Users yang memiliki hak akses untuk mengelola sistem.
+Method
+         * validasiPendaftaran()
+ Digunakan untuk memvalidasi pendaftaran mahasiswa yang melakukan registrasi mandiri.
+         * inputMahasiswaManual()
+ Digunakan admin untuk menambahkan mahasiswa secara manual (misalnya mahasiswa yang magang melalui instansi).
+         * kelolaData()
+ Digunakan admin untuk mengelola berbagai data dalam sistem seperti:
+            * data mahasiswa
+            * data mentor
+            * data presensi
+            * data logbook
+            * generateSrt()
+ Digunakan untuk menghasilkan atau membuat sertifikat magang bagi mahasiswa yang telah menyelesaikan program magang.
+Relasi
+Admin memiliki hubungan mengelola banyak mahasiswa.
+               3. Class Mentor
+Class Mentor merupakan turunan dari class Users yang berperan sebagai pembimbing mahasiswa selama magang.
+Atribut
+               * jabatan : varchar
+ Menyimpan jabatan mentor di instansi (misalnya: Staff IT, Kepala Bidang, dll).
+Method
+                  * validasi()
+ Digunakan mentor untuk memvalidasi aktivitas mahasiswa seperti logbook.
+                  * inputNilai()
+ Digunakan mentor untuk memberikan nilai kepada mahasiswa setelah magang selesai.
+Relasi
+                     * 1 Mentor membimbing banyak Mahasiswa (0..*)
+ Artinya satu mentor dapat membimbing beberapa mahasiswa.
+4. Class Mahasiswa
+Class Mahasiswa merupakan turunan dari class Users yang menyimpan data mahasiswa yang mengikuti program magang.
+Atribut
+                        * nim : varchar
+ Nomor Induk Mahasiswa.
+                        * universitas : varchar
+ Nama universitas asal mahasiswa.
+                        * jurusan : varchar
+ Program studi mahasiswa.
+                        * status_akun : varchar
+ Status akun mahasiswa seperti:
+                           * pending
+                           * aktif
+                           * selesai
+Method
+                           * registerMandiri()
+ Digunakan mahasiswa untuk melakukan pendaftaran magang secara mandiri melalui sistem.
+                           * presensi()
+ Digunakan mahasiswa untuk melakukan absensi harian.
+                           * inputLog()
+ Digunakan mahasiswa untuk mengisi logbook kegiatan harian.
+                           * uploadProj()
+ Digunakan mahasiswa untuk mengupload proyek atau hasil kerja selama magang.
+Relasi
+Mahasiswa memiliki hubungan dengan beberapa class lain yaitu:
+                              * Presensi
+                              * Logbook
+                              * Penilaian
+                              * Sertifikat
+5. Class Presensi
+Class Presensi digunakan untuk menyimpan data kehadiran mahasiswa selama magang.
+Atribut
+                              * id_absen : int
+ ID unik untuk setiap data presensi.
+                              * tanggal : date
+ Tanggal presensi dilakukan.
+                              * jam : time
+ Waktu presensi dilakukan.
+                              * foto_selfie : varchar
+ File foto selfie mahasiswa sebagai bukti kehadiran.
+                              * id_user : int (FK)
+ Foreign key yang menghubungkan presensi dengan mahasiswa.
+Method
+                                 * submitPresensi()
+ Digunakan mahasiswa untuk mengirimkan presensi.
+                                 * viewRiwayat()
+ Digunakan untuk melihat riwayat presensi mahasiswa.
+Relasi
+                                    * 1 Mahasiswa memiliki banyak Presensi (0..*)
+6. Class Logbook
+Class Logbook digunakan untuk mencatat aktivitas atau pekerjaan yang dilakukan mahasiswa setiap hari selama magang.
+Atribut
+                                    * id_log : int
+ ID unik logbook.
+                                    * tgl_kegiatan : date
+ Tanggal kegiatan dilakukan.
+                                    * deskripsi_kerja : text
+ Penjelasan mengenai pekerjaan atau kegiatan yang dilakukan mahasiswa.
+                                    * bukti_dokumen : varchar
+ File pendukung seperti dokumen atau gambar.
+                                    * status_validasi : enum
+ Status validasi dari mentor:
+                                    * pending
+                                    * disetujui
+                                    * ditolak
+                                    * id_user : int (FK)
+ Foreign key yang menghubungkan logbook dengan mahasiswa.
+Method
+                                       * inputKegiatan()
+ Digunakan mahasiswa untuk memasukkan aktivitas harian.
+                                       * validasiMentor()
+ Digunakan mentor untuk memvalidasi kegiatan yang diinput mahasiswa.
+Relasi
+                                          * 1 Mahasiswa memiliki banyak Logbook (0..*)
+7. Class Penilaian
+Class Penilaian digunakan untuk menyimpan hasil evaluasi mahasiswa selama magang.
+Atribut
+                                          * id_nilai : int
+ ID unik data penilaian.
+                                          * skor_analisis : int
+ Nilai kemampuan analisis mahasiswa.
+                                          * skor_komunikasi : int
+ Nilai kemampuan komunikasi mahasiswa.
+                                          * skor_kerjasama : int
+ Nilai kemampuan kerja sama tim mahasiswa.
+                                          * skor_disiplin : int
+ Nilai kedisiplinan mahasiswa.
+                                          * nilai_akhir : float
+ Nilai akhir yang dihitung dari seluruh parameter penilaian.
+                                          * id_user : int (FK)
+ Foreign key yang menghubungkan penilaian dengan mahasiswa.
+Method
+                                             * hitungNilai()
+ Digunakan sistem untuk menghitung nilai akhir mahasiswa.
+                                             * validasiMentor()
+ Digunakan mentor untuk menyetujui nilai yang diberikan.
+Relasi
+                                                * 1 Mahasiswa memiliki 1 Penilaian
+8. Class Sertifikat
+Class Sertifikat digunakan untuk menyimpan data sertifikat magang mahasiswa.
+Atribut
+                                                * id_sertifikat : int
+ ID unik sertifikat.
+                                                * nomor : varchar
+ Nomor sertifikat.
+                                                * tanggal_terbit : date
+ Tanggal sertifikat diterbitkan.
+                                                * qr_code : varchar
+ QR code yang digunakan untuk verifikasi sertifikat.
+                                                * file_pdf : varchar
+ File sertifikat dalam format PDF.
+Method
+                                                   * generateQR()
+ Digunakan sistem untuk membuat QR code pada sertifikat.
+                                                   * generatePDF()
+ Digunakan untuk menghasilkan sertifikat dalam format PDF.
+Relasi
+                                                      * 1 Mahasiswa memiliki 1 Sertifikat
+9. Hubungan Antar Class (Relasi)
+Relasi yang terdapat pada diagram:
+Inheritance (Pewarisan)
+                                                      * Users → Admin
+                                                      * Users → Mentor
+                                                      * Users → Mahasiswa
+Artinya ketiga class tersebut mewarisi atribut dan method dari Users.
+Association
+Hubungan antar class dalam sistem:
+                                                      * Mentor → Mahasiswa : 1 Mentor membimbing banyak Mahasiswa (0..*)
+                                                      * Mahasiswa → Presensi : 1 Mahasiswa memiliki banyak presensi
+                                                      * Mahasiswa → Logbook : 1 Mahasiswa memiliki banyak logbook
+                                                      * Mahasiswa → Penilaian : 1 Mahasiswa memiliki 1 penilaian
+                                                      * Mahasiswa → Sertifikat : 1 Mahasiswa memiliki 1 sertifikat
+  
+
+Rancangan Database Sistem MAGIS
+1. Tabel Users
+                                                      * Menyimpan data seluruh pengguna sistem.
+                                                      * Digunakan untuk proses login dan autentikasi.
+                                                      * Menyimpan informasi dasar seperti nama, email, username, dan password.
+                                                      * Memiliki atribut role untuk membedakan jenis pengguna (admin, mentor, mahasiswa).
+                                                      * Menjadi tabel induk (parent) bagi tabel mahasiswa dan mentor.
+2. Tabel Mahasiswa
+                                                      * Menyimpan data khusus mahasiswa yang mengikuti program magang.
+                                                      * Berisi informasi seperti NIM, universitas, jurusan, nomor telepon, dan alamat.
+                                                      * Menyimpan status akun mahasiswa (pending, aktif, ditolak, selesai).
+                                                      * Menghubungkan mahasiswa dengan periode magang dan mentor pembimbing.
+                                                      * Digunakan sebagai referensi untuk data presensi, logbook, dan penilaian.
+3. Tabel Mentor
+                                                      * Menyimpan data mentor atau pembimbing magang.
+                                                      * Berisi informasi jabatan mentor di instansi.
+                                                      * Mentor bertugas membimbing dan memvalidasi kegiatan mahasiswa.
+                                                      * Satu mentor dapat membimbing banyak mahasiswa.
+4. Tabel Periode_Magang
+                                                      * Menyimpan data periode pelaksanaan program magang.
+                                                      * Berisi informasi tanggal mulai, dan tanggal selesai.
+                                                      * Digunakan untuk mengatur jadwal magang yang tersedia.
+                                                      * Setiap mahasiswa akan terhubung dengan satu periode magang.
+                                                      * Kuota mahasiswa untuk mengontrol jumlah peserta per periode. Tabel ini memungkinkan mahasiswa dan admin melihat ketersediaan kuota magang.
+5. Tabel Pendaftaran
+                                                      * Menyimpan data pendaftaran mahasiswa yang mendaftar magang.
+                                                      * Digunakan oleh admin untuk memverifikasi dan memutuskan status pendaftaran.
+                                                      * Menyimpan status pendaftaran seperti pending, diterima, ditolak atau selesai..
+                                                      * Menghubungkan mahasiswa dengan periode magang yang dipilih.
+6. Tabel Berkas_Pendaftaran
+                                                      * Menyimpan dokumen persyaratan magang yang diunggah mahasiswa.
+                                                      * Contoh berkas yang disimpan seperti CV, surat pengantar, transkrip nilai, dan proposal magang.
+                                                      * Digunakan admin untuk mengecek kelengkapan dokumen pendaftaran.
+                                                      * Satu pendaftaran dapat memiliki beberapa dokumen persyaratan.
+7. Tabel Presensi
+                                                      * Menyimpan data kehadiran mahasiswa selama masa magang.
+                                                      * Berisi informasi tanggal, jam masuk, jam keluar, dan foto selfie sebagai bukti kehadiran.
+                                                      * Digunakan oleh admin untuk monitoring kehadiran mahasiswa.
+8. Tabel Logbook
+                                                      * Menyimpan catatan kegiatan harian mahasiswa selama magang.
+                                                      * Berisi deskripsi aktivitas atau pekerjaan yang dilakukan mahasiswa setiap hari.
+                                                      * Mahasiswa dapat mengunggah bukti dokumen atau foto kegiatan.
+                                                      * Mentor akan melakukan validasi kegiatan dengan status: pending, disetujui, atau ditolak.
+                                                      * Digunakan sebagai bahan evaluasi kinerja mahasiswa.
+9. Tabel Penilaian
+                                                      * Menyimpan data hasil evaluasi kinerja mahasiswa.
+                                                      * Penilaian diberikan oleh mentor berdasarkan beberapa aspek seperti:
+-        kemampuan analisis
+-        komunikasi
+-        kerja sama tim
+-        disiplin
+                                                      * Sistem akan menghitung nilai akhir secara otomatis.
+                                                      * Setiap mahasiswa hanya memiliki satu data penilaian akhir.
+10. Tabel Laporan_Akhir
+                                                      * Menyimpan laporan akhir magang yang diunggah oleh mahasiswa.
+                                                      * Laporan berisi ringkasan kegiatan dan hasil kerja selama magang.
+                                                      * Digunakan sebagai salah satu syarat untuk menyelesaikan program magang.
+                                                      * File laporan biasanya disimpan dalam format PDF.
+11. Tabel Sertifikat
+                                                      * Menyimpan data sertifikat magang yang diberikan kepada mahasiswa.
+                                                      * Berisi nomor sertifikat, tanggal terbit, dan file sertifikat dalam format PDF.
+                                                      * Sertifikat dilengkapi dengan QR Code untuk verifikasi keaslian dokumen.
+                                                      * Diberikan setelah mahasiswa menyelesaikan magang dan mendapatkan penilaian akhir.
+  
+
+Referensi Diagram:
+https://drive.google.com/file/d/1UecFYM4_gufCt5bWcpGzVE2UraSJ0sM5/view?usp=sharing
+Tools Diagram:
+https://www.mermaidflow.app/editor
+Code prompt-nya minta buatkan oleh AI, jelaskan alurnya pakai kalimat selengkap-lengkapnya, nanti digenerate oleh tools itu jadi diagram
+________________
+APRI TIANSAH, S.KOM., M.KOM apri@lampungprov.go.id >> PRANATA KOMPUTER AHLI PRATAMA (username : Apri tiansah, psw :apri123)
+MUHAMMAD ATTAN SAPUTRA, S.KOM attan@lampungprov.go.id PENATA LAYANAN OPERASIONAL (username: muhammad attan, pw: attan123)
+FERI SAPUTRA, S.KOM >> feri@lampungprov.go.id PENATA LAYANAN OPERASIONAL (username: ferisaputra, pw: feri123)
+ARIF ROHMAN EDISON, S.KOM arifglory@lampungprov.go.id PENATA LAYANAN OPERASIONAL (usn : arifrohman, pw : arif123)
+DENIS SETIAJI, S.KOM >> denisdst@lampugprov.go.id PENATA LAYANAN OPERASIONAL (usn : denissetiaji, pw : denis123)
+WAHYU RAMADHAN, S.KOM wahyu@lampungprov.go.id PENATA LAYANAN OPERASIONAL (usn : wahyurmdhn, pw :wahyu123)
+Admin : admin, pw : admin123
+Mahasiswa :
+username: budi, pw: mhs123
+username: hikmatun_nazilah@teknokrat.ac.id, pw: zila123456
+username: vercha_nandita_putri@teknokrat.ac.id ,  pw: eca123
+
+
+Kalau sudah Ok semua nanti selesai di review hari selasa, lanjutkan susun bahan di atas ke Format Dokumen ini ya:
+Format Dokumen Pembangunan/Pengembangan Aplikasi
+
+Dokumen 1, 2 dan 3 saja. Thankyou, Semangat 🤩
+
+________________
