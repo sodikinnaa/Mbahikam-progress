@@ -34,6 +34,13 @@ Dokumen yang disiapkan pada workspace ini meliputi:
 2. Mentor atau Pembina.
 3. Mahasiswa Magang.
 
+## Jumlah Modul per Role
+
+1. Admin: 7 modul.
+2. Mentor: 3 modul.
+3. Mahasiswa: 5 modul.
+4. Total modul role-based: 15 modul.
+
 ## Struktur Folder Utama
 
 1. project/docs/flowchart - Dokumen alur global dan role-based.
